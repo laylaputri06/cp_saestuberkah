@@ -1,0 +1,306 @@
+:root {
+    --primary-blue: #200E98;
+    /* Warna biru dominan sesuai gambar */
+    --accent-green: #25D366;
+    /* Warna WA */
+    --light-bg: #F4F7FE;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Disarankan import font ini di header */
+    overflow-x: hidden;
+}
+
+/* Utilities Custom */
+.bg-blue-custom {
+    background-color: var(--primary-blue) !important;
+    color: white;
+}
+
+.text-blue-custom {
+    color: var(--primary-blue) !important;
+}
+
+.btn-wa {
+    background-color: var(--accent-green);
+    color: white;
+    border: none;
+}
+
+.btn-wa:hover {
+    background-color: #1ebc57;
+    color: white;
+}
+
+.btn-primary-custom {
+    background-color: var(--primary-blue);
+    color: white;
+    border: 1px solid var(--primary-blue);
+}
+
+.btn-primary-custom:hover {
+    background-color: white;
+    color: var(--primary-blue);
+}
+
+/* Hero Section Home - Membuat lengkungan bawah */
+.hero-section {
+    background-color: white;
+    padding-top: 80px;
+    position: relative;
+}
+
+/* Dekorasi lengkungan biru di bawah hero (opsional, bisa pakai SVG) */
+.hero-wave {
+    width: 100%;
+    height: 100px;
+    background-color: var(--primary-blue);
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    margin-top: -50px;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* Card Styles */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar Galeri Produk */
+.sidebar-produk {
+    background-color: var(--primary-blue);
+    min-height: 100vh;
+    padding: 2rem;
+    color: white;
+}
+
+.sidebar-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.sidebar-link:hover,
+.sidebar-link.active {
+    color: white;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.sticky-sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* Floating Buttons di Galeri */
+.floating-nav {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+/* --- CSS untuk Section Hubungi & Ikuti Kami --- */
+
+/* Wrapper Tombol Sosmed Bulat */
+.social-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white !important;
+    font-size: 1.8rem;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    margin: 0 8px;
+    /* Jarak antar icon */
+}
+
+.social-btn:hover {
+    transform: scale(1.1);
+    /* Efek membesar saat disentuh */
+    color: white;
+}
+
+/* Warna Spesifik Sesuai Request */
+.btn-ig {
+    /* Gradasi Instagram */
+    background: linear-gradient(45deg, #FE7E03, #FA412C, #E9206D, #DE1390, #BA11C7, #862BF8);
+}
+
+.btn-wa {
+    background-color: #25D366;
+    /* Hijau WA */
+}
+
+.btn-tiktok {
+    background-color: #000000;
+    /* Lingkaran Hitam */
+    position: relative;
+}
+
+/* Efek Glitch TikTok pada Iconnya */
+.btn-tiktok i {
+    text-shadow: 2px 2px 0px #00F2EA, -2px -2px 0px #FF004F;
+}
+
+.btn-email {
+    background-color: #E6AE0C;
+    /* Kuning Email */
+}
+
+.btn-fb {
+    background-color: #0866FF;
+    /* Biru Facebook */
+}
+
+.btn-biznet {
+    background-color: #2A4494;
+    /* Biru Tua Biznet (Estimasi dari 2A44..) */
+}
+
+.btn-yt {
+    background-color: #E61B18;
+    /* Merah Youtube */
+}
+
+/* Desain Card Kontak (Kotak Biru Muda) */
+.contact-card {
+    background-color: #F0F7FF;
+    /* Biru sangat muda */
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    height: 100%;
+    /* Agar tinggi sama rata */
+    text-align: center;
+    /* Default rata tengah */
+    transition: 0.3s;
+}
+
+.contact-card:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    color: #1A2B4C;
+    /* Warna teks judul gelap */
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-card-text {
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.layout-wrapper {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Sidebar Kiri (Sticky) */
+.sidebar-wrapper {
+    width: 280px;
+    background-color: var(--primary-blue);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding: 2rem;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+/* Konten Kanan (Grid Produk) */
+.main-content {
+    margin-left: 280px;
+    /* Jarak agar tidak ketutupan sidebar */
+    width: calc(100% - 280px);
+    background-color: #F4F8FD;
+    min-height: 100vh;
+    padding: 3rem;
+}
+
+/* Menu Sidebar */
+.nav-link-product {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    padding: 12px 15px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+    font-weight: 400;
+    border-radius: 8px;
+}
+
+.nav-link-product:hover,
+.nav-link-product.active {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-weight: 700;
+    padding-left: 20px;
+}
+
+/* ========================================= */
+/* FIX UKURAN GAMBAR KATEGORI (Halama Produk & Layanan) */
+/* ========================================= */
+
+/* Targetkan gambar di dalam kartu halaman Home */
+#produk .card-img-top {
+    width: 100%;
+    /* Lebar mengikuti kartu */
+    height: 300px;
+    /* TINGGI DIPAKSA SAMA (Bisa diubah jadi 280px atau 350px) */
+    object-fit: cover;
+    /* MAGIC: Gambar dipotong rapi biar pas (tidak gepeng) */
+    object-position: top center;
+    /* Fokus crop di bagian atas (baju) */
+}
+
+/* Pastikan tinggi kartu juga seragam */
+#produk .card {
+    height: 100%;
+    /* Kartu mengisi tinggi kolom */
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Khusus Mobile */
+@media (max-width: 768px) {
+    #produk .card-img-top {
+        height: 250px;
+        /* Di HP gambarnya jangan terlalu tinggi */
+    }
+}
